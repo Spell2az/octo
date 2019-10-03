@@ -7,8 +7,11 @@ services:
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_HTTPS_PORT=44306
     ports:
-      - "10000:80"
-      - "44306:443"
+      - "10001:80"
+      - "44302:443"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  db_postgres:
+    ports:
+      - "5432:5432"

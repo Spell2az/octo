@@ -7,13 +7,13 @@ services:
       context: .
       dockerfile: Eshop/Dockerfile
     ports:
-      - "8000:80"
-      - "8001:443"
+      - "22100:80"
+      - "22101:443"
     depends_on:
-      - db_postgress
-  db_postgress:
+      - db_postgres
+  db_postgres:
     image: postgres:9.6.15-alpine
-    volumes:
-      - ./Database:/var/lib/postgresql/data
+    ports:
+     - "5432"
     environment:
       POSTGRES_PASSWORD: P@a55word
