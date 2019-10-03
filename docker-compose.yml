@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  eshop:
+    image: ${DOCKER_REGISTRY-}eshop
+    build:
+      context: .
+      dockerfile: Eshop/Dockerfile
+    ports:
+      - "8000:80"
+      - "8001:443"
+    depends_on:
+      - db_postgress
+  db_postgress:
+    image: postgres:9.6.15-alpine
+    volumes:
+      - ./Database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: P@a55word
