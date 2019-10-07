@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using Eshop.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Eshop.Models;
 
-namespace Eshop.Controllers
+namespace Eshop.Areas.Main.Controllers
 {
+    [Area("Main")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
