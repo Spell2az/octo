@@ -5,6 +5,7 @@ project.lock.json
 *.pyc
 nupkg/
 node_modules/
+*/wwwroot/lib/
 
 # Visual Studio Code
 .vscode
