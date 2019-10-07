@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "bootswatch@4.3.1",
+      "destination": "wwwroot/lib/bootswatch/",
+      "files": [
+        "package.json",
+        "README.md",
+        "dist/lux/bootstrap.css",
+        "dist/lux/bootstrap.min.css",
+        "dist/lux/_bootswatch.scss",
+        "dist/lux/_variables.scss"
+      ]
+    }
+  ]
+}
