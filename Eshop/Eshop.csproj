@@ -5,6 +5,7 @@
     <UserSecretsId>aspnet-Eshop-ADCE822E-238C-4E79-9F75-867918F241FD</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <ApplicationIcon />
   </PropertyGroup>
 
   <ItemGroup>

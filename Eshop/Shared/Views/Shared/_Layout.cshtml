@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Eshop</title>
+    <link rel="stylesheet" href="~/lib/bootswatch/dist/lux/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" asp-area="Main" asp-controller="Home" asp-action="Index">Octo<i class="fab fa-cloudsmith nav-logo pl-2"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a asp-area="Main" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+                    @Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new {@class = "nav-link"})
+                </li>
+                @*<li class="nav-item">@Html.ActionLink("Shop", "Index", "Shop", routeValues: null, htmlAttributes: new { @class = "nav-link" })</li>*@
+            </ul>
+
+
+            <form class="form-inline my-2 my-lg-0 nav-item">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="nav-item">
+      
+                <a href="#" class="nav-link">
+                    <i class="fas fa-shopping-cart shopping-cart"></i>
+                </a>
+            </div>
+            @await Html.PartialAsync("_LoginPartial")
+        </div>
+    </nav>
+   
+</header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Eshop - <a asp-area="Main" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

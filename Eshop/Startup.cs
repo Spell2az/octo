@@ -31,8 +31,11 @@ namespace Eshop
             {
                 options.EnableEndpointRouting = false;
             });
-          services.Configure<RazorViewEngineOptions>(o =>
-                o.ViewLocationExpanders.Add(new CustomViewLocationExpander()));
+            services.Configure<RazorViewEngineOptions>(o =>
+                {
+                    o.ViewLocationExpanders.Add(new CustomViewLocationExpander());
+                   // o.AreaPageViewLocationFormats.Add("/Shared/Views/Shared/{0}" + RazorViewEngine.ViewExtension);
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

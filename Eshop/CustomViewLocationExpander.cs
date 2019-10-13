@@ -11,15 +11,14 @@ namespace Eshop
         public IEnumerable<string> ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<string> viewLocations)
         {
             var updatedViewLocations = viewLocations.ToList();
-            updatedViewLocations.Add("/Views/{0}.cshtml");
-            updatedViewLocations.Add("/Views/Shared/{0}.cshtml");
+            updatedViewLocations.Add("/Shared/Views/{0}.cshtml");
+            updatedViewLocations.Add("/Shared/Views/Shared/{0}.cshtml");
 
             return updatedViewLocations;
         }
 
         public void PopulateValues(ViewLocationExpanderContext context)
         {
-            Console.WriteLine(context);
         }
     }
 }
